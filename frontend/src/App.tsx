@@ -1,15 +1,22 @@
 import { useState } from 'react'
 import LandingPage from './LandingPage'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.css'
+import IdeaPage from './IdeaPage';
+import NoPage from './Nopage';
 
 function App() {
 
 
   return (
-    <>
-     <LandingPage/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />}/>
+        <Route path="idea" element={<IdeaPage />}/>
+        <Route path="*" element={<NoPage />}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

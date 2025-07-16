@@ -1,0 +1,30 @@
+import type { IdeaComponent } from "../Interface"
+
+export const ideas: IdeaComponent[] = [
+  {username: "user1", imagePath: "../public/avatar-male.png", idea: "A mobile app that helps you find the best local street food vendors.", likeCount: 1},
+  {username: "user2", imagePath: "../public/avatar-male.png", idea: "A community garden project to grow fresh produce for food banks.", likeCount: 10},
+  {username: "user3", imagePath: "../public/avatar-male.png", idea: "Developing a new, eco-friendly material for clothing production.", likeCount: 100},
+  {username: "user4", imagePath: "../public/avatar-male.png", idea: "An online platform for connecting remote workers with quiet co-working spaces.", likeCount: 3},
+  {username: "user5", imagePath: "../public/avatar-male.png", idea: "Creating interactive educational games for children with learning disabilities.", likeCount: 53},
+  {username: "user6", imagePath: "../public/avatar-male.png", idea: "A subscription box service for unique, artisanal coffee beans from around the world.", likeCount: 74},
+  {username: "user7", imagePath: "../public/avatar-female.png", idea: "A sustainable urban farming initiative that uses hydroponics to grow produce in disused city spaces.", likeCount: 212},
+  {username: "user8", imagePath: "../public/avatar-male.png", idea: "An AI-powered personal finance assistant that helps users track spending and identify saving opportunities.", likeCount: 88},
+  {username: "user9", imagePath: "../public/avatar-female.png", idea: "A community-based platform for skill-sharing and bartering services, reducing reliance on monetary exchange.", likeCount: 345},
+  {username: "user10", imagePath: "../public/avatar-male.png", idea: "Development of biodegradable packaging materials made from algae, to combat plastic pollution.", likeCount: 156},
+  {username: "user11", imagePath: "../public/avatar-female.png", idea: "A subscription box service for unique, artisanal coffee beans from around the world. A mobile app that connects volunteers with local charities for urgent support during crises.A subscription box service for unique, artisanal coffee beans from around the world.A subscription box service for unique, artisanal coffee beans from around the world.", likeCount: 67},
+  {username: "user12", imagePath: "../public/avatar-male.png", idea: "Smart traffic management systems that use real-time data to reduce congestion and emissions.", likeCount: 199},
+  {username: "user13", imagePath: "../public/avatar-female.png", idea: "An educational virtual reality game that teaches children about environmental conservation.", likeCount: 28},
+  {username: "user14", imagePath: "../public/avatar-male.png", idea: "Creation of modular, affordable housing units that can be rapidly deployed in disaster-stricken areas.", likeCount: 401},
+  {username: "user15", imagePath: "../public/avatar-female.png", idea: "A wearable device that monitors stress levels and suggests personalized relaxation techniques.", likeCount: 92},
+  {username: "user16", imagePath: "../public/avatar-male.png", idea: "A decentralized energy grid powered by residential solar panels, allowing peer-to-peer energy trading.", likeCount: 310},
+  {username: "user17", imagePath: "../public/avatar-female.png", idea: "An online marketplace for upcycled and recycled fashion, promoting circular economy principles.", likeCount: 75},
+  {username: "user18", imagePath: "../public/avatar-male.png", idea: "Integration of augmented reality into public transport to provide interactive information and entertainment.", likeCount: 133},
+  {username: "user19", imagePath: "../public/avatar-female.png", idea: "A subscription service for ethically sourced, organic beauty products with refillable packaging.", likeCount: 50},
+  {username: "user20", imagePath: "../public/avatar-male.png", idea: "Development of AI tutors that adapt to individual learning styles for personalized education.", likeCount: 220},
+  {username: "user21", imagePath: "../public/avatar-female.png", idea: "A network of smart waste bins that automatically sort recyclables and notify collection services.", likeCount: 180},
+  {username: "user22", imagePath: "../public/avatar-male.png", idea: "Creation of a mental wellness app that uses gamification to encourage daily mindfulness practices.", likeCount: 65},
+  {username: "user23", imagePath: "../public/avatar-female.png", idea: "A platform for connecting local artisans with tourists for authentic cultural experiences.", likeCount: 112},
+  {username: "user24", imagePath: "../public/avatar-male.png", idea: "Implementation of vertical gardens on building facades to improve air quality and aesthetics.", likeCount: 250},
+  {username: "user25", imagePath: "../public/avatar-female.png", idea: "A peer-to-peer car-sharing service focused on electric vehicles for reduced carbon footprint.", likeCount: 98},
+  {username: "user26", imagePath: "../public/avatar-male.png", idea: "Development of a smart home system that optimizes energy consumption based on user habits and weather.", likeCount: 170}
+]
