@@ -5,3 +5,8 @@ export interface IdeaComponent {
   idea: string,
   likeCount: number,
 }
+
+export interface Message {
+  role: string
+  content: string
+}

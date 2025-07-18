@@ -4,9 +4,12 @@ import IdeaCard from "./components/IdeaCard";
 
 import { ideas } from "./database/ideas";
 import Chat from "./components/Chat";
+import IdeaCreateButton from "./components/IdeaCreateButton";
+import IdeaEditor from "./components/IdeaEditor";
 
 const IdeaPage = () => {
   const [showChat, setShowChat] = useState(false);
+  const [showIdeaEditor, setShowEditor] = useState(false)
 
   return (
     <>
@@ -36,6 +39,15 @@ const IdeaPage = () => {
             <IdeaCard key={index} idea={idea} />
           ))}
         </div>
+      </div>
+      <div className=" fixed bottom-0 right-0">
+          <div className="absolute bottom-0 right-30">
+            {showIdeaEditor && <IdeaEditor closeEditor={()=> setShowEditor(false)}/>}
+          </div>
+          <div className="mr-15 mb-10">
+            <IdeaCreateButton toggleIdeaEditor={ ()=>{setShowEditor((prev) => !prev)} }/>
+          </div>
+
       </div>
     </>
   );

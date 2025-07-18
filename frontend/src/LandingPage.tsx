@@ -1,7 +1,18 @@
 import React from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
+
+  const navigate = useNavigate();
+
+  const handleGoLoginPage = () => {
+    navigate('/login')
+  }
+
+  const handleGoSignUpPage = () => {
+    navigate('/signup')
+  }
   return (
     <>
       <div className="font-ubuntu relative flex items-center w-full h-screen justify-center ">
@@ -17,10 +28,10 @@ const LandingPage = () => {
         </div>
 
         <div className="flex flex-col ml-7 z-10 mr-7 ">
-          <button className="btn btn-primary text-background border-4 rounded-4xl font-bold px-16 py-4 mb-6 hover:cursor-pointer">
+          <button onClick={handleGoSignUpPage} className="btn btn-primary text-background border-4 rounded-4xl font-bold px-16 py-4 mb-6 hover:cursor-pointer">
             Sign in
           </button>
-          <button className="btn btn-accent rounded-4xl text-background font-bold px-16 py-4 hover:cursor-pointer duration-300 hover:shadow-[0_0_20px_3px_rgba(161,124,173,0.6)] ">
+          <button onClick={handleGoLoginPage} className="btn btn-accent rounded-4xl text-background font-bold px-16 py-4 hover:cursor-pointer duration-300 hover:shadow-[0_0_20px_3px_rgba(161,124,173,0.6)] ">
             Login
           </button>
         </div>
