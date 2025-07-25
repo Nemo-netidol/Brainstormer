@@ -1,5 +1,5 @@
 from sqlmodel import Field, SQLModel, create_engine, Session, select
-import models
+from models import Users
 
 engine = create_engine('postgresql://admin:1234@localhost:5432/myDB', echo=True)
 
@@ -17,8 +17,12 @@ def create_user():
 
 
 def create_db_and_tables(): 
+    # 1. Drop existing tables (BE CAREFUL WITH THIS IN PRODUCTION!)
+    SQLModel.metadata.drop_all(engine)
+    # 2. Create tables with the correct schema
     SQLModel.metadata.create_all(engine)
 
+    
 def delete_user():
      with Session(engine) as session:
           statement = select(Users).where(Users.id == 5)

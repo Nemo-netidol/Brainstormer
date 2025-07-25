@@ -1,5 +1,7 @@
 from typing import Optional
-from sqlmodel import Field, SQLModel, create_engine, Session, select, Relationship
+import enum
+from sqlmodel import Field, SQLModel, create_engine, Session, select, Relationship, Enum, Column
+from sqlalchemy import Enum as SQLEnum 
 
 class Users(SQLModel, table=True):
     id: int | None = Field(primary_key=True, default=None)
@@ -9,10 +11,14 @@ class Users(SQLModel, table=True):
     ideas: list["Idea"] = Relationship(back_populates="user")
 
 
+class Status(str, enum.Enum):
+    open = "open"
+    close = "close"
+
 class Room(SQLModel, table=True):
     id: int | None = Field(primary_key=True, default=None)
     topic: str = Field()
-    status: str = Field()
+    status: Status = Field(sa_column=Column(SQLEnum(Status)), default=Status.open)
 
     ideas: list["Idea"] = Relationship(back_populates="room")
 
